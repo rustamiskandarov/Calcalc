@@ -2,26 +2,26 @@ package ru.rustisk.calcalc.model;
 
 import java.time.LocalDateTime;
 
-public class UserMealWithExceed {
+public class UserMealWithExcess {
     protected final LocalDateTime dateTime;
     protected final String description;
     protected final int calories;
-    protected final boolean exceed;
+    protected final boolean excess;
 
-    public UserMealWithExceed(LocalDateTime dateTime, String description, int calories, boolean exceed) {
+    public UserMealWithExcess(LocalDateTime dateTime, String description, int calories, boolean excess) {
         this.dateTime = dateTime;
         this.description = description;
         this.calories = calories;
-        this.exceed = exceed;
+        this.excess = excess;
     }
 
     @Override
     public String toString() {
-        return "UserMealWithExceed{" +
+        return "UserMealWithExcess{" +
                 "dateTime=" + dateTime +
                 ", description='" + description + '\'' +
                 ", calories=" + calories +
-                ", exceed=" + exceed +
+                ", excess=" + excess +
                 '}';
     }
 }
