@@ -12,18 +12,20 @@ import java.util.Map;
 import java.util.stream.Collectors;
 
 public class UserMealsUtil {
-    public static void main(String[] args) {
-
-        exec(()-> System.out.println(""));
-        List<UserMeal> mealList = Arrays.asList(
+    public static final List<UserMeal> MEAL_LIST = Arrays.asList(
             new UserMeal(LocalDateTime.of(2021, Month.MAY, 29,10,0), "Завтрак", 1000),
             new UserMeal(LocalDateTime.of(2021, Month.MAY, 29,13,0), "Обед", 2000),
             new UserMeal(LocalDateTime.of(2021, Month.MAY, 29,19,0), "Ужин", 800),
             new UserMeal(LocalDateTime.of(2021, Month.MAY, 30,10,0), "Завтрак", 500),
             new UserMeal(LocalDateTime.of(2021, Month.MAY, 30,13,0), "Обед", 500),
             new UserMeal(LocalDateTime.of(2021, Month.MAY, 30,19,0), "Ужин", 500)
-        );
-        List<UserMealWithExcess> filteredMealsWithExcesses = getFilteredMealsWithExcesses(mealList, LocalTime.of(13, 0), LocalTime.of(19, 0), 2000);
+            );
+
+    public static void main(String[] args) {
+
+        exec(()-> System.out.println(""));
+
+        List<UserMealWithExcess> filteredMealsWithExcesses = getFilteredMealsWithExcesses(MEAL_LIST, LocalTime.of(13, 0), LocalTime.of(19, 0), 2000);
         filteredMealsWithExcesses.forEach(System.out::println);
     }
 
@@ -40,5 +42,9 @@ public class UserMealsUtil {
     //public static List<UserMealWithExcess> getFilteredMealsWithExceededByCycle(List<>)
     public static void exec(Runnable runnable){
         runnable.run();
+    }
+
+    public static List<UserMeal> getWithExcess(List<UserMeal> mealList, int i) {
+
     }
 }
