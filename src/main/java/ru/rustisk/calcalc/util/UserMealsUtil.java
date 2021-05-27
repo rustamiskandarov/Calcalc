@@ -23,7 +23,6 @@ public class UserMealsUtil {
 
     public static void main(String[] args) {
 
-        exec(()-> System.out.println(""));
 
         List<UserMealWithExcess> filteredMealsWithExcesses = getFilteredMealsWithExcesses(MEAL_LIST, LocalTime.of(13, 0), LocalTime.of(19, 0), 2000);
         filteredMealsWithExcesses.forEach(System.out::println);
@@ -39,12 +38,7 @@ public class UserMealsUtil {
                 .collect(Collectors.toList());
     }
 
-    //public static List<UserMealWithExcess> getFilteredMealsWithExceededByCycle(List<>)
-    public static void exec(Runnable runnable){
-        runnable.run();
-    }
-
-    public static List<UserMeal> getWithExcess(List<UserMeal> mealList, int i) {
-        return  mealList;
+    public static List<UserMealWithExcess> getWithExcess(List<UserMeal> mealList, int caloriesPerDay) {
+        return  getFilteredMealsWithExcesses(mealList, LocalTime.MIN, LocalTime.MAX, caloriesPerDay);
     }
 }
