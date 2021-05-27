@@ -1,6 +1,7 @@
 package ru.rustisk.calcalc.web;
 
-import com.sun.org.slf4j.internal.Logger;
+
+import org.slf4j.Logger;
 import ru.rustisk.calcalc.model.UserMeal;
 import ru.rustisk.calcalc.util.UserMealsUtil;
 
@@ -13,7 +14,8 @@ import java.time.LocalDateTime;
 import java.time.Month;
 import java.util.Arrays;
 
-import static com.sun.org.slf4j.internal.LoggerFactory.getLogger;
+import static org.slf4j.LoggerFactory.getLogger;
+
 
 public class MealServlet extends HttpServlet {
     private static final Logger log = getLogger(MealServlet.class);
