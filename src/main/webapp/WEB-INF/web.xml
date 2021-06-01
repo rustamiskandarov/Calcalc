@@ -6,5 +6,14 @@
 
     <display-name>CalCalc</display-name>
 
+    <error-page>
+        <error-code>404</error-code>
+        <location>/Error404.jsp</location>
+    </error-page>
+
+    <error-page>
+        <exception-type>javax.servlet.ServletException</exception-type>
+        <location>/ErrorServlet.jsp</location>
+    </error-page>
 
 </web-app>
